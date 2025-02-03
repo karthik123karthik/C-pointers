@@ -14,4 +14,3 @@
 - eg - int i=10;
 - char* ptr = &i;
 - printf("%d", *ptr); it will print only one byte of data. as size of char is one byte.
-- 
