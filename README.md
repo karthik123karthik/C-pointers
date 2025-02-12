@@ -25,7 +25,8 @@
  
   - Ok lets take a c program and look what each file will look like during compilation
 
- #include<stdio.h>
+ ```
+#include<stdio.h>
 
 // main entry function
 int main(){
@@ -35,11 +36,13 @@ int main(){
         printf("HELLO WORLD");
 #endif
         return 0;
-} 
+}
+```
 
 AFTER PREPROCESSING FILE WILL LOOK LIKE 
 gcc -E hello_world.c
 
+```
 # 1 "hello_world.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
@@ -844,11 +847,12 @@ int main(){
 
  return 0;
 }
+```
 
 COMMENTS have been removed, header files have been added and conditional macros have been checked
 
 Now pass it through compilation we should be getting equivalent assembly intruction for targeted processor.
-
+```
         .file   "hello_world.c"
         .text
         .section        .rodata
@@ -877,7 +881,7 @@ main:
         .size   main, .-main
         .ident  "GCC: (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0"
         .section        .note.GNU-stack,"",@progbits
-
+```
 Now After this we will pass this to assembler and it will convert this into machine instructions .obj files.
 
 Once this is done we will link library functions or linker will arrange the code so that necessary definitions are available between the files.
