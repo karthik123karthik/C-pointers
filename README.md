@@ -887,3 +887,14 @@ Now After this we will pass this to assembler and it will convert this into mach
 Once this is done we will link library functions or linker will arrange the code so that necessary definitions are available between the files.
 gcc -o hello_world.c 
 
+Now lets understand how a c executable is loaded into memory.
+executable is loaded into memory in a very organized way called process address space. 
+
+there are four segments we will be having - 
+stack - local variables, function arguements.
+| | |
+heap
+.bss - uninitialized data
+initialized data - static, extern, global
+text or code segment
+
