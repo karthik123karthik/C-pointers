@@ -891,10 +891,12 @@ Now lets understand how a c executable is loaded into memory.
 executable is loaded into memory in a very organized way called process address space. 
 
 there are four segments we will be having - 
+```
 stack - local variables, function arguements.
 | | |
 heap
 .bss - uninitialized data
 initialized data - static, extern, global
 text or code segment
+```
 
