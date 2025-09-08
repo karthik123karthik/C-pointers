@@ -900,3 +900,24 @@ initialized data - static, extern, global
 text or code segment
 ```
 
+
+## FUNCTION POINTS
+
+- Function pointers are the variables that stores the address of the function memory i,e pointer to the executable code.
+- it helps us to tread function as a variable
+
+  Example : res = add(1, 2);
+
+  int(*operation)(int, int) = add;
+  res = operation(1, 2);
+
+- Defining Function pointer
+- int(*oper)(int, int) = add || &add both are same.
+- int res = oper(1, 2) || (*oper)(1, 2); both are same.
+
+- Typedef with function pointer
+typdef int(*Operation)(int , int);
+
+// Defining pointer Operation opr;
+// opr = add;
+
