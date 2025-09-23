@@ -11,3 +11,12 @@
 void func(){
     printf("HELLOD WORLD\n");
 }
+
+const int vector_table[] __attribute__((section(".vector_table"))) = {
+    0x20001000,                  // initial stack pointer
+    (int)func,                   // address of func
+    (uint32_t) Reset_Handler,    // Reset handler
+    (uint32_t) NMI_Handler,      // NMI handler
+    (uint32_t) HardFault_Handler, // Hard fault handler
+    // ... more interrupt handlers
+};
