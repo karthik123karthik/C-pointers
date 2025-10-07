@@ -12,6 +12,7 @@ void func(){
     printf("HELLOD WORLD\n");
 }
 
+// this attribute is a GNU extension which specify the properties or characteristics of the variable or the function
 const int vector_table[] __attribute__((section(".vector_table"))) = {
     0x20001000,                  // initial stack pointer
     (int)func,                   // address of func
